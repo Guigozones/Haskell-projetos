@@ -10,7 +10,8 @@ fromBits:: [Int]->Int
 
 --     bits = [n - 1, n - 2 .. 0]
 
---     zipped = zip list bits
+--     zipped = zip list bits fs
 
 fromBits [] = 0
 fromBits (a:xs) = 2^(length xs)*a + fromBits xs
+
